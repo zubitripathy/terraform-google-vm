@@ -90,6 +90,12 @@ spec:
         description: Network to deploy to. Only one of network or subnetwork should be specified.
         varType: string
         defaultValue: ""
+        connections:
+          - source:
+              source: github.com/terraform-google-modules/terraform-google-network
+              version: "~> 6.0"
+            spec:
+              outputExpr: network_self_link
       - name: subnetwork
         description: Subnet to deploy to. Only one of network or subnetwork should be specified.
         varType: string
